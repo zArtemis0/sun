@@ -1,59 +1,126 @@
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #111;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+  font-family: 'Baloo 2', cursive;
+  background-color: #e0f7fa;
+  text-align: center;
+  padding: 20px;
+  font-weight: 700;
+  color: #004d40;
 }
 
-.container {
-    text-align: center;
-    background: #222;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px #000;
+h1 {
+  margin-bottom: 20px;
 }
 
 button {
-    padding: 15px 30px;
-    font-size: 16px;
-    margin: 15px 0;
-    cursor: pointer;
-    border: none;
-    background: #4caf50;
-    color: white;
-    border-radius: 5px;
+  font-family: 'Baloo 2', cursive;
+  font-weight: 700;
+  border: none;
+  border-radius: 10px;
+  background-color: #00796b;
+  color: white;
+  padding: 12px 25px;
+  margin: 10px 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  user-select: none;
 }
 
 button:disabled {
-    background: #555;
-    cursor: not-allowed;
+  background-color: #004d40;
+  cursor: not-allowed;
+  opacity: 0.5;
 }
 
-#result {
-    font-size: 18px;
-    margin-top: 10px;
+button:hover:not(:disabled) {
+  background-color: #004d40;
 }
 
-.common {
-    color: gray;
+#auraDisplay {
+  margin: 15px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  min-height: 60px;
 }
-.uncommon {
-    color: green;
+
+.aura {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  border-radius: 50%;
+  background-color: #4db6ac;
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 60px;
+  text-align: center;
+  box-shadow: 0 0 10px #26a69a;
+  user-select: none;
 }
-.rare {
-    color: blue;
+
+/* 4-pointed rotating star effect */
+.aura::before,
+.aura::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border: 3px solid #26a69a;
+  transform-origin: center center;
+  border-radius: 3px;
+  animation: spin 3s linear infinite;
 }
-.epic {
-    color: purple;
+
+.aura::before {
+  margin-left: -10px;
+  margin-top: -30px;
+  border-width: 3px 0 0 3px;
+  animation-delay: 0s;
 }
-.legendary {
-    color: orange;
+
+.aura::after {
+  margin-left: -10px;
+  margin-top: 10px;
+  border-width: 0 3px 3px 0;
+  animation-delay: 1.5s;
 }
-.mythic {
-    color: red;
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
+
+#gearShop {
+  margin: 15px auto;
+  max-width: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
 }
+
+.gear-item {
+  background-color: #00897b;
+  border-radius: 10px;
+  padding: 12px;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  user-select: none;
+  flex: 1 1 120px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.gear-item:hover {
+  background-color: #004d40;
+}
+
