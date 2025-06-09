@@ -1,22 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Sol's RNG Clone</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sol's RNG Game</title>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="container">
-        <h1>Sol's RNG Clone</h1>
-        <p id="rollCount">Rolls: 0</p>
-        <button id="rollBtn">Roll</button>
-        <label>
-            <input type="checkbox" id="autoRoll"> Auto-roll
-        </label>
-        <p id="result">Click roll to begin!</p>
-        <p id="cooldownTimer"></p>
-    </div>
+  <h1>Sol's RNG-style Game</h1>
+  <div id="stats">
+    <p>Rolls: <span id="rollCount">0</span></p>
+    <p>Luck: <span id="luck">1.00x</span></p>
+    <p>Speed: <span id="speed">1.00x</span></p>
+  </div>
 
-    <script src="script.js"></script>
+  <div id="auraDisplay" class="aura-container"></div>
+
+  <button id="rollBtn">Roll</button>
+  <button id="quickRollBtn" disabled>Quick Roll (1000+ rolls)</button>
+
+  <h2>Gear Shop</h2>
+  <div id="gearShop"></div>
+
+  <h2>Potions</h2>
+  <div id="potions">
+    <button id="useLuckPotionBtn" disabled>Use Luck Potion</button>
+    <button id="useSpeedPotionBtn" disabled>Use Speed Potion</button>
+    <p>Luck Potions: <span id="luckPotionCount">0</span></p>
+    <p>Speed Potions: <span id="speedPotionCount">0</span></p>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
