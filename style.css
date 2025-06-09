@@ -1,0 +1,59 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #111;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    background: #222;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #000;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 16px;
+    margin: 15px 0;
+    cursor: pointer;
+    border: none;
+    background: #4caf50;
+    color: white;
+    border-radius: 5px;
+}
+
+button:disabled {
+    background: #555;
+    cursor: not-allowed;
+}
+
+#result {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.common {
+    color: gray;
+}
+.uncommon {
+    color: green;
+}
+.rare {
+    color: blue;
+}
+.epic {
+    color: purple;
+}
+.legendary {
+    color: orange;
+}
+.mythic {
+    color: red;
+}
+}
